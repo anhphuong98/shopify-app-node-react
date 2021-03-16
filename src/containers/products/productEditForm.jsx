@@ -58,6 +58,7 @@ class ProductEditForm extends Component {
 
         };
         this.props.handleEditProduct(this.state.productEditId, data);
+        const isLoading = this.props.product;
     }
 
     onEditorStateChange = (editorState) => {

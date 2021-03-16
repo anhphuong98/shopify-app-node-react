@@ -1,4 +1,5 @@
 import axios from "axios";
+import { sendRequest } from "../helpers/sendRequest";
 export const productServices = {
     getAllProducts,
     deleteProduct,
@@ -6,25 +7,24 @@ export const productServices = {
 }
 
 function getAllProducts(query) {
-    return axios({
+    return sendRequest({
         method: 'GET',
         url: '/shopify/api/products.json',
         params: query
-    });
+    }, false, false, "Get all product success", "Get all product failed");
 }
 
 function deleteProduct(id) {
-    console.log(id);
-    return axios({
+    return sendRequest({
         method: 'DELETE',
         url: `/shopify/api/products/${id}.json`,
-    });
+    }, true, true, "Delete product success", "Delete product failed");
 }
 
 function handleEditProduct(id, data) {
-    return axios({
+    return sendRequest({
         method: 'PUT',
         url: `/shopify/api/products/${id}.json`,
         data
-    });
+    }, true, true, "Edit product success", "Edit product failed");
 }
