@@ -1,0 +1,16 @@
+.detail {
+    color: #004080;
+    cursor: pointer;
+}
+
+.edit {
+    color: #ffcc00;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.delete {
+    color: #b30000;
+    cursor: pointer;
+}

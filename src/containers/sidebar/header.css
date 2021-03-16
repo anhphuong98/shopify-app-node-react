@@ -1,0 +1,22 @@
+.header {
+    background-color: #3b4f66;
+    position: sticky;
+    top: 0;
+}
+
+.logo-header {
+    width: 180px;
+    height: 50px;
+}
+.product-management {
+    color: #FFFFFF;
+}
+
+.search-box {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.nav-item-search {
+    margin-left: 5rem;
+}
